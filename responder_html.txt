@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arogna - Responder Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#b6152e",
+                      "tertiary-container": "#6d767e",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#92001f",
+                      "secondary-fixed": "#ffdad9",
+                      "tertiary-fixed": "#dbe4ed",
+                      "on-tertiary-fixed": "#141d23",
+                      "on-tertiary": "#ffffff",
+                      "surface": "#f7f9ff",
+                      "surface-container-highest": "#e0e3e8",
+                      "outline": "#717786",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#bfc8d0",
+                      "on-tertiary-fixed-variant": "#3f484f",
+                      "on-primary-container": "#fefcff",
+                      "primary-container": "#0070ea",
+                      "outline-variant": "#c1c6d7",
+                      "on-primary-fixed": "#001a41",
+                      "on-secondary-fixed": "#410008",
+                      "surface-bright": "#f7f9ff",
+                      "surface-variant": "#e0e3e8",
+                      "secondary-fixed-dim": "#ffb3b2",
+                      "inverse-surface": "#2d3135",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#fcfcff",
+                      "on-secondary-container": "#fffbff",
+                      "on-primary-fixed-variant": "#004493",
+                      "surface-container-high": "#e5e8ee",
+                      "inverse-primary": "#adc7ff",
+                      "secondary-container": "#d93343",
+                      "error": "#ba1a1a",
+                      "tertiary": "#545d65",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#adc7ff",
+                      "on-surface": "#181c20",
+                      "primary": "#0059bb",
+                      "on-surface-variant": "#414754",
+                      "surface-container-low": "#f1f4f9",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#d8e2ff",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#d7dadf",
+                      "surface-container": "#ebeef3",
+                      "inverse-on-surface": "#eef1f6",
+                      "surface-tint": "#005bc0",
+                      "background": "#f7f9ff",
+                      "on-background": "#181c20"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "md": "16px",
+                      "lg": "24px",
+                      "xl": "32px",
+                      "xs": "4px",
+                      "margin": "24px"
+              },
+              "fontFamily": {
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-lg": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "11px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased h-screen flex flex-col overflow-hidden font-body-md text-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest text-primary border-b border-surface-container-highest shadow-sm z-50 sticky top-0 flex justify-between items-center w-full px-6 h-16 font-label-lg tracking-tight flex-shrink-0">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-[24px]">medical_services</span>
+<span class="text-lg font-black tracking-tight">Arogna</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-secondary font-label-lg text-label-lg font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary block"></span>
+                Active
+            </span>
+<button class="bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full font-label-lg text-label-lg hover:bg-surface-container transition-colors active:scale-95 duration-200">
+                Online
+            </button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto relative bg-surface-container-low flex flex-col md:pb-0 pb-[80px]">
+<!-- Red Alert Banner -->
+<div class="bg-secondary text-on-secondary px-6 py-4 flex items-center justify-between shadow-md z-10 flex-shrink-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[28px] animate-pulse" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<h2 class="font-title-lg text-title-lg text-on-secondary m-0">Active Dispatch: Cardiac Arrest</h2>
+<p class="font-body-md text-body-md text-on-secondary/80 mt-1">Priority 1 - Immediate Response Required</p>
+</div>
+</div>
+<span class="font-label-lg text-label-lg bg-on-secondary text-secondary px-3 py-1 rounded-full">02:14</span>
+</div>
+<!-- Map Container -->
+<div class="flex-1 relative w-full min-h-[300px]">
+<img alt="Map view showing city streets with a highlighted route" class="w-full h-full object-cover absolute inset-0 opacity-80" data-alt="Detailed map interface showing city grid with a blue highlighted path leading to a red destination marker, modern UI style" data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuX7coLK5rrdsbxh9s_GpDRq4nMg2qHKuBAK2Ssnzij481UDfrtSOJVTkpz5y_KdAEu7OXxMhBwkCiW2zBH5aZPFIE_czJQHOzIY4VMna9wFbWWof1dkLeu64-fvBnP_ncO5PXDvz8M833Kmrk_5nOjHhIUt5OJFSCS1xycuCBpBezWfkMgKFq_leJ-pVeX5IEyOhQz6T8wYR3pBQbB3TDCEXyFTwmlsg7KCI67Itl1VAD-OQtvbaofx74zj880wHv1z6ml5cn2Gs"/>
+<!-- Route Overlay Elements -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<!-- Decorative Route Line -->
+<svg class="w-full h-full absolute inset-0 text-primary opacity-60" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M10,90 Q40,50 90,10" fill="none" stroke="currentColor" stroke-dasharray="4,4" stroke-width="2"></path>
+</svg>
+<!-- Destination Marker -->
+<div class="absolute top-[20%] right-[30%] flex flex-col items-center">
+<div class="bg-secondary text-on-secondary w-10 h-10 rounded-full flex items-center justify-center shadow-lg relative animate-bounce">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="absolute -bottom-1 w-2 h-2 bg-secondary transform rotate-45"></div>
+</div>
+</div>
+<!-- Responder Marker -->
+<div class="absolute bottom-[20%] left-[30%] flex flex-col items-center">
+<div class="bg-primary text-on-primary w-12 h-12 rounded-full flex items-center justify-center shadow-lg border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[24px]">local_hospital</span>
+</div>
+<div class="bg-surface-container-lowest text-on-surface text-xs font-bold px-2 py-1 rounded shadow mt-2">1.2 mi</div>
+</div>
+</div>
+<!-- Floating Victim Profile Card (Bottom Anchored) -->
+<div class="absolute bottom-6 left-6 right-6 md:left-auto md:right-6 md:w-[400px] bg-surface-container-lowest rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-surface-container-highest overflow-hidden z-20 pointer-events-auto">
+<div class="p-5 border-b border-surface-container-highest">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">John Doe</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">45 yrs • Male</p>
+</div>
+<span class="bg-error-container text-on-error-container font-label-md text-label-md px-2 py-1 rounded">Critical</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="bg-surface-container-low p-3 rounded-lg border border-surface-container-highest">
+<span class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-1">Blood Type</span>
+<span class="font-headline-md text-headline-md text-error">O+</span>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-surface-container-highest">
+<span class="block font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-1">Allergies</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold">Penicillin</span>
+</div>
+</div>
+</div>
+<div class="p-5 bg-surface flex flex-col gap-3">
+<button class="w-full bg-primary text-on-primary font-label-lg text-label-lg py-3 rounded-lg hover:bg-surface-tint transition-colors shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">directions_car</span>
+                        On Scene
+                    </button>
+<div class="flex gap-3">
+<button class="flex-1 bg-surface-container-high text-on-surface font-label-lg text-label-lg py-3 rounded-lg hover:bg-surface-container-highest transition-colors border border-outline-variant">
+                            Transporting
+                        </button>
+<button class="flex-1 bg-surface-container-high text-on-surface font-label-lg text-label-lg py-3 rounded-lg hover:bg-surface-container-highest transition-colors border border-outline-variant">
+                            Resolved
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest/95 backdrop-blur-md border-t border-surface-container-highest shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 flex justify-around items-center px-4 pt-2 pb-safe-offset-2 h-[72px]">
+<button class="flex flex-col items-center justify-center text-primary bg-primary-fixed/50 rounded-2xl px-4 py-1 flex-1 tap-highlight-transparent active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[24px] mb-1" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-[11px] font-medium">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant flex-1 hover:text-primary tap-highlight-transparent active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[24px] mb-1">notifications_active</span>
+<span class="font-label-md text-[11px] font-medium">Alerts</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant flex-1 hover:text-primary tap-highlight-transparent active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[24px] mb-1">local_hospital</span>
+<span class="font-label-md text-[11px] font-medium">Hospitals</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant flex-1 hover:text-primary tap-highlight-transparent active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[24px] mb-1">call</span>
+<span class="font-label-md text-[11px] font-medium">Dialer</span>
+</button>
+</nav>
+<!-- Desktop Side Nav (Hidden on mobile) -->
+<aside class="hidden md:flex flex-col w-64 bg-surface-container-lowest border-r border-surface-container-highest fixed left-0 top-16 bottom-0 z-40 overflow-y-auto pt-6">
+<nav class="flex flex-col gap-2 px-4 w-full">
+<a class="flex items-center gap-3 bg-primary-fixed text-on-primary-fixed px-4 py-3 rounded-lg font-label-lg text-label-lg transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface px-4 py-3 rounded-lg font-label-lg text-label-lg transition-colors" href="#">
+<span class="material-symbols-outlined">notifications_active</span>
+                Alerts
+                <span class="ml-auto bg-error text-on-error text-[10px] font-bold px-2 py-0.5 rounded-full">3</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface px-4 py-3 rounded-lg font-label-lg text-label-lg transition-colors" href="#">
+<span class="material-symbols-outlined">local_hospital</span>
+                Hospitals
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface px-4 py-3 rounded-lg font-label-lg text-label-lg transition-colors" href="#">
+<span class="material-symbols-outlined">call</span>
+                Dialer
+            </a>
+</nav>
+</aside>
+<style>
+        .pb-safe-offset-2 { padding-bottom: max(env(safe-area-inset-bottom), 8px); }
+    </style>
+</body></html>

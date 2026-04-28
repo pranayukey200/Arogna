@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arogna Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#adc7ff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#181c20",
+                        "inverse-surface": "#2d3135",
+                        "on-tertiary-fixed": "#141d23",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-low": "#f1f4f9",
+                        "secondary-fixed": "#ffdad9",
+                        "surface": "#f7f9ff",
+                        "on-primary-fixed": "#001a41",
+                        "on-secondary-fixed": "#410008",
+                        "tertiary": "#545d65",
+                        "outline": "#717786",
+                        "primary": "#0059bb",
+                        "surface-container": "#ebeef3",
+                        "secondary-fixed-dim": "#ffb3b2",
+                        "surface-dim": "#d7dadf",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "surface-tint": "#005bc0",
+                        "primary-container": "#0070ea",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fcfcff",
+                        "surface-container-high": "#e5e8ee",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface": "#181c20",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e8",
+                        "on-surface-variant": "#414754",
+                        "inverse-on-surface": "#eef1f6",
+                        "on-secondary-fixed-variant": "#92001f",
+                        "on-primary-container": "#fefcff",
+                        "on-tertiary-fixed-variant": "#3f484f",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e0e3e8",
+                        "outline-variant": "#c1c6d7",
+                        "tertiary-fixed": "#dbe4ed",
+                        "background": "#f7f9ff",
+                        "tertiary-container": "#6d767e",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#bfc8d0",
+                        "secondary-container": "#d93343",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#b6152e",
+                        "on-primary-fixed-variant": "#004493"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["11px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar from JSON -->
+<header class="flex items-center justify-between px-6 py-4 w-full sticky top-0 z-50 bg-white dark:bg-gray-950 rounded-none border-b border-gray-100 dark:border-gray-800 shadow-sm font-sans antialiased text-sm font-medium Inter">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-gray-500">person</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400">Arogna</span>
+</div>
+<button class="text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors active:scale-95 transition-transform duration-150 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center justify-center p-gutter md:py-xl">
+<div class="w-full max-w-[480px] flex flex-col items-center">
+<!-- Professional Medical Illustration -->
+<div class="w-full h-48 md:h-56 mb-lg rounded-xl overflow-hidden shadow-sm relative bg-surface-container flex items-center justify-center">
+<img alt="Medical team in modern clinic" class="w-full h-full object-cover opacity-90" data-alt="clean minimal flat vector style illustration of a medical professional checking a tablet, soft blue and white enterprise color palette, isolated on a light grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBbJLVuKbtVZTfEt3yUYSk9ira8qjWEp9wWb7TQv_pkMDk7lbpPJbcOY1fF-IdVUhHGTen6EnOUid05KIFyRrqK_A90rSZJwzFPRgA4iAD5wb9XwsITGNnpVFvdTPSD5_q9JK_ZedWUmDmYp9JgW3w2i_TePaed7WmFAbjoI-G-v5LTZ01jRDNNjMyMXmeVqj4V73ipra-wTrqpnbjxJ6t5aAbFzr3kTtmltoGntLUk54yqv9YXJ9chY8VXIwL96iyTDLsvhei6ps"/>
+<!-- Gradient overlay to soften image and make it feel more like an illustration -->
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+</div>
+<!-- Header Text -->
+<div class="text-center flex flex-col gap-base mb-xl w-full">
+<h1 class="font-headline-lg text-headline-lg text-on-background">System Setup</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[400px] mx-auto">
+                    To ensure full functionality and rapid response times, Arogna requires access to the following device features.
+                </p>
+</div>
+<!-- Permissions List -->
+<div class="w-full flex flex-col gap-sm mb-xl">
+<!-- Location -->
+<div class="flex items-center p-md bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mr-md shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="flex-1">
+<h3 class="font-title-lg text-title-lg text-on-background">Location</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-[13px]">Vital for emergency dispatch routing.</p>
+</div>
+<div class="ml-md">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full relative">
+<div class="w-4 h-4 bg-outline absolute top-1 left-1 rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- Camera -->
+<div class="flex items-center p-md bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mr-md shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+</div>
+<div class="flex-1">
+<h3 class="font-title-lg text-title-lg text-on-background">Camera</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-[13px]">Upload visual incident reports.</p>
+</div>
+<div class="ml-md">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full relative">
+<div class="w-4 h-4 bg-outline absolute top-1 left-1 rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- Mic -->
+<div class="flex items-center p-md bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mr-md shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mic</span>
+</div>
+<div class="flex-1">
+<h3 class="font-title-lg text-title-lg text-on-background">Microphone</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-[13px]">Required for voice dictation notes.</p>
+</div>
+<div class="ml-md">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full relative">
+<div class="w-4 h-4 bg-outline absolute top-1 left-1 rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- SMS -->
+<div class="flex items-center p-md bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed mr-md shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sms</span>
+</div>
+<div class="flex-1">
+<h3 class="font-title-lg text-title-lg text-on-background">SMS</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-[13px]">Receive critical alert broadcasts.</p>
+</div>
+<div class="ml-md">
+<div class="w-11 h-6 bg-surface-container-highest rounded-full relative">
+<div class="w-4 h-4 bg-outline absolute top-1 left-1 rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="w-full flex flex-col gap-sm">
+<button class="w-full py-sm px-lg bg-primary text-on-primary rounded-xl font-label-lg text-label-lg shadow-sm hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200 flex items-center justify-center gap-2 h-12">
+                    Grant Access
+                </button>
+<button class="w-full py-sm px-lg text-outline font-label-lg text-label-lg hover:text-on-background transition-colors duration-200 h-12">
+                    Skip for now
+                </button>
+</div>
+</div>
+</main>
+</body></html>

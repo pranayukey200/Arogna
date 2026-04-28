@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "847187352008",
+    "firebase_url": "https://arogna-default-rtdb.firebaseio.com",
+    "project_id": "arogna",
+    "storage_bucket": "arogna.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847187352008:android:fa891909c1fa1a8c7688fd",
+        "android_client_info": {
+          "package_name": "com.example.arogna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAet2FHWRet09846W4B7xf45uDDt3AOFwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847187352008:android:f4e54573f7e0c7e77688fd",
+        "android_client_info": {
+          "package_name": "com.example.vayu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAet2FHWRet09846W4B7xf45uDDt3AOFwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847187352008:android:fc44b7afbd5f46257688fd",
+        "android_client_info": {
+          "package_name": "com.mycompany.arogna1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAet2FHWRet09846W4B7xf45uDDt3AOFwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arogna - Rewards</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#adc7ff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#181c20",
+                        "inverse-surface": "#2d3135",
+                        "on-tertiary-fixed": "#141d23",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-low": "#f1f4f9",
+                        "secondary-fixed": "#ffdad9",
+                        "surface": "#f7f9ff",
+                        "on-primary-fixed": "#001a41",
+                        "on-secondary-fixed": "#410008",
+                        "tertiary": "#545d65",
+                        "outline": "#717786",
+                        "primary": "#0059bb",
+                        "surface-container": "#ebeef3",
+                        "secondary-fixed-dim": "#ffb3b2",
+                        "surface-dim": "#d7dadf",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "surface-tint": "#005bc0",
+                        "primary-container": "#0070ea",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fcfcff",
+                        "surface-container-high": "#e5e8ee",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface": "#181c20",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e8",
+                        "on-surface-variant": "#414754",
+                        "inverse-on-surface": "#eef1f6",
+                        "on-secondary-fixed-variant": "#92001f",
+                        "on-primary-container": "#fefcff",
+                        "on-tertiary-fixed-variant": "#3f484f",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e0e3e8",
+                        "outline-variant": "#c1c6d7",
+                        "tertiary-fixed": "#dbe4ed",
+                        "background": "#f7f9ff",
+                        "tertiary-container": "#6d767e",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#bfc8d0",
+                        "secondary-container": "#d93343",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#b6152e",
+                        "on-primary-fixed-variant": "#004493"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["11px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-gray-950 flex items-center justify-between px-6 py-4 w-full sticky top-0 z-50 rounded-none border-b border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex items-center gap-sm">
+<img alt="User Profile" class="w-8 h-8 rounded-full object-cover" data-alt="Professional headshot of a female medical professional in scrubs with a calm expression, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbtKSo7-1ixOUBZ3K9HEaUUp7gZIwvzcBzeagcmz51tTXchzyfKljLsiNBf8ERWiTRujNdYgH5agB_3xwiWCfUbnt74N2nznSwlVU8adgGukQAyyT84lYXlUVPWBFsH2c9KSH_px6rufm54WV2QDdF1Kzqa3oGQL3We0nAqjn9cOMrMlXltqHbyjXsa_Z4KYVFFw3bBmz0-hciwd4D7CLp64bW_r8rZbXJSpn6dh_TS3h_NSA-ItuKYNd4GdOjdOh0xJWDKLeV3_w"/>
+<span class="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400 font-sans antialiased text-sm font-medium Inter">Arogna</span>
+</div>
+<!-- Desktop Navigation Cluster (md:flex) -->
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-sans antialiased text-sm font-medium Inter text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors px-3 py-2 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="map">map</span>
+                Map
+            </a>
+<a class="font-sans antialiased text-sm font-medium Inter text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors px-3 py-2 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="campaign">campaign</span>
+                Report
+            </a>
+<a class="font-sans antialiased text-sm font-medium Inter text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors px-3 py-2 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="group">group</span>
+                Feed
+            </a>
+<a class="font-sans antialiased text-sm font-medium Inter text-blue-700 dark:text-blue-400 font-bold hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors px-3 py-2 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="emoji_events" data-weight="fill" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+                Rewards
+            </a>
+<a class="font-sans antialiased text-sm font-medium Inter text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors px-3 py-2 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="smart_toy">smart_toy</span>
+                AI Bot
+            </a>
+</nav>
+<button class="active:scale-95 transition-transform duration-150 hover:bg-gray-50 dark:hover:bg-gray-900 p-2 rounded-full text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-4xl mx-auto px-gutter py-xl pb-32 md:pb-xl flex flex-col gap-xl">
+<!-- Header Text -->
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Rewards &amp; Recognition</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">Track your operational readiness and peer standing.</p>
+</div>
+<!-- Top Card: User Points & Badge -->
+<section class="bg-primary-container text-on-primary-container rounded-[24px] p-lg md:p-xl shadow-[0_8px_30px_rgba(0,112,234,0.15)] flex flex-col md:flex-row items-center md:items-start justify-between gap-lg relative overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+<div class="flex flex-col items-center md:items-start z-10 text-center md:text-left">
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-on-primary-container/80 mb-sm">Current Status</span>
+<div class="flex flex-col gap-xs">
+<span class="font-display-lg text-display-lg text-on-primary-container">1250</span>
+<span class="font-title-lg text-title-lg font-bold">Guardian</span>
+</div>
+</div>
+<div class="z-10 flex flex-col items-center gap-sm bg-white/10 backdrop-blur-md rounded-2xl p-lg border border-white/20">
+<span class="material-symbols-outlined text-6xl text-white drop-shadow-md" data-icon="military_tech" data-weight="fill" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="font-label-md text-label-md text-white font-semibold">Savior Badge</span>
+</div>
+</section>
+<!-- Leaderboard -->
+<section class="flex flex-col gap-md">
+<h3 class="font-title-lg text-title-lg text-on-surface px-xs">Top Responders</h3>
+<div class="bg-surface-container-lowest rounded-[16px] shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant overflow-hidden flex flex-col divide-y divide-surface-variant">
+<!-- Rank 1 (Gold Concept) -->
+<div class="flex items-center gap-md p-md bg-primary/5 hover:bg-primary/10 transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-title-lg text-title-lg shadow-sm">
+                        1
+                    </div>
+<img alt="Dr. Sarah Miller" class="w-12 h-12 rounded-full object-cover border-2 border-primary" data-alt="Headshot of a male emergency doctor with a confident smile, wearing a stethoscope, well-lit hospital background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDysnwtbP2JNMp9bsmt5KM8e6O2s0l631uZz4InGBWpQM5jmqJ9VINNla4F6xBVkum7hGD2lokkEc45rE4K73BJwJ_1nSiiBcwp84l_QkhGjOhmuWJSl8Au61rYc7T4vBgRdoR07q9_mPdUUXk0mt9x2dbQJRNQvcZtzfneIadOFvRIdBIG3UBFkcOHH6eszm9a6RH6THx-SpTqY6samGbB8x_LWny9CGDNh2NNkT1MxhyKg2bBYA3zEOU5PePQrnSPz2puznOdLck"/>
+<div class="flex-1">
+<p class="font-body-lg text-body-lg font-bold text-on-surface">Dr. Sarah Miller</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Chief Medical Officer</p>
+</div>
+<div class="text-right">
+<p class="font-title-lg text-title-lg text-primary font-bold">2,450</p>
+<p class="font-label-md text-label-md text-primary font-semibold uppercase">Pts</p>
+</div>
+</div>
+<!-- Rank 2 (Silver Concept) -->
+<div class="flex items-center gap-md p-md bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-10 h-10 rounded-full bg-outline flex items-center justify-center text-white font-title-lg text-title-lg shadow-sm">
+                        2
+                    </div>
+<img alt="Paramedic Davis" class="w-12 h-12 rounded-full object-cover border-2 border-outline" data-alt="Close up portrait of a young female paramedic in high-visibility uniform, serious expression, outdoors daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASaeTIc9naEM8Wt4pc6JzxtzJ7exq4kz6nPBKcLvI2hoIzbm9yD-xyQhFBMZXExfMbuDcXAy8jZjYpqY_Boqe7jDRlQ88tYYGxh94R3FcM5JOnriOGuyhUIwOVUWiOm7BReg-zlP-bGBGfHKZL04FKXNxny3mmNiy4GmqHQG1kNY0s9OsuqTVUQAkwsocqJJWo0PgJqCNbY5p2MH9VO16-UenYqqxAOT2gfs5iUspV1Jvrjd3ZCCwsRcxAOSmhhnUWnSdCGXGgPyc"/>
+<div class="flex-1">
+<p class="font-body-lg text-body-lg font-bold text-on-surface">Paramedic Davis</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Field Unit Alpha</p>
+</div>
+<div class="text-right">
+<p class="font-title-lg text-title-lg text-outline font-bold">1,980</p>
+<p class="font-label-md text-label-md text-outline font-semibold uppercase">Pts</p>
+</div>
+</div>
+<!-- Rank 3 (Bronze Concept) -->
+<div class="flex items-center gap-md p-md bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container font-title-lg text-title-lg shadow-sm">
+                        3
+                    </div>
+<img alt="Nurse Patel" class="w-12 h-12 rounded-full object-cover border-2 border-tertiary-container" data-alt="Portrait of a male nurse in blue scrubs, arms crossed, standing in a clinic hallway with bright fluorescent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsIsG72NsaMtmcQb34wdC3XniGqBeq9wFwQsX_b4wGytqhb_qe7GYMMgjBsUsOjX8LsWxjQaN4ZBXh3vX_h66a1r1Rl-FYw2_kjV7O7F05ydvX6SZxTsg_w6KCa-Vjw1yEFrTlVqMWkAl_gc3FrLfR4ga9NsbvuApC4BAx3RgfC20BEWQRZsnSbCM0tzu-r85EcyjLEJdy_tIZkZnIMx3AMy4t1ubGfGHWKp3V3vdc2L4gElwV8iNkgFTjmbK5OGvZ_L8iWDD_GV8"/>
+<div class="flex-1">
+<p class="font-body-lg text-body-lg font-bold text-on-surface">Nurse Patel</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Trauma Ward</p>
+</div>
+<div class="text-right">
+<p class="font-title-lg text-title-lg text-tertiary font-bold">1,820</p>
+<p class="font-label-md text-label-md text-tertiary font-semibold uppercase">Pts</p>
+</div>
+</div>
+<!-- Rank 4 -->
+<div class="flex items-center gap-md p-md hover:bg-surface-container-low transition-colors">
+<div class="w-10 h-10 rounded-full bg-transparent flex items-center justify-center text-on-surface-variant font-title-lg text-title-lg">
+                        4
+                    </div>
+<img alt="Dr. Reynolds" class="w-12 h-12 rounded-full object-cover" data-alt="Headshot of mature male doctor with glasses, white coat, looking directly at camera with professional demeanor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD28qJTD8rAMpvjilGJ9jlUu7Uiexh7doFoG2keWyMYG6whuqrFAUst1qOhbK1fXdhRUuhdn23yzz4HfBgsw8kf0Jm3wvJiEJXPGdwl6oxqyy2FwjnvCX4kHB3Wt8Aj2Q45eA2c049OQc9BrmD8PgF0rZ3NDT1-vF1OrACaBWCVCmjUdYkBrxBKA1jchaIhvupp5cga2KisF4TlRG__wFDB3v9sxBbQZUV6AmyyOI6vz9op6L0e7DpFOV4wpx1xpLhDmXH6Vz78GGA"/>
+<div class="flex-1">
+<p class="font-body-lg text-body-lg font-medium text-on-surface">Dr. Reynolds</p>
+<p class="font-body-md text-body-md text-on-surface-variant">General Practice</p>
+</div>
+<div class="text-right">
+<p class="font-title-lg text-title-lg text-on-surface-variant">1,500</p>
+</div>
+</div>
+<!-- Rank 5 (Current User Representation) -->
+<div class="flex items-center gap-md p-md bg-primary-fixed/30 hover:bg-primary-fixed/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-transparent flex items-center justify-center text-primary font-title-lg text-title-lg">
+                        5
+                    </div>
+<img alt="You" class="w-12 h-12 rounded-full object-cover border-2 border-primary" data-alt="Professional headshot of a female medical professional in scrubs with a calm expression, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQLJdmXlKvl93cP4fiBuMq8kbvn5FtduL346v21QfpjuUsYEfEk2e-dceWDxaCNJZjHNITn4_JgktkXBDIZhVLhE2xqm2DgJTW4ffhueh36BWyg0fx6_fdWjBV44n1tFfy7Er2bPYJR9cLGQna9_Z5zGBhPgZLeC1jAj0_Py3l6K7RnyjYtxH23eWlmRE4xLP8LGeoN76OmV4uVzIx6KYJZle-_u6bynU2ci1MajTztqTMFnPFRDUxhuRFMha2l7OJtTprVGDpiPE"/>
+<div class="flex-1">
+<p class="font-body-lg text-body-lg font-bold text-primary">You</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Guardian</p>
+</div>
+<div class="text-right">
+<p class="font-title-lg text-title-lg text-primary font-bold">1,250</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-3 pb-8 rounded-t-2xl border-t border-gray-100 dark:border-gray-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="map">map</span>
+<span class="text-[10px] font-semibold tracking-normal Inter">Map</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="campaign">campaign</span>
+<span class="text-[10px] font-semibold tracking-normal Inter">Report</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="group">group</span>
+<span class="text-[10px] font-semibold tracking-normal Inter">Feed</span>
+</button>
+<!-- Active Item -->
+<button class="flex flex-col items-center justify-center gap-1 text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-xl px-2 py-1 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="emoji_events" data-weight="fill" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span class="text-[10px] font-semibold tracking-normal Inter">Rewards</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="smart_toy">smart_toy</span>
+<span class="text-[10px] font-semibold tracking-normal Inter">AI Bot</span>
+</button>
+</nav>
+</body></html>

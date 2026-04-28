@@ -1,0 +1,30 @@
+# Environment secrets
+.env
+
+# Flutter/Dart
+.dart_tool/
+.packages
+build/
+*.g.dart
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Android
+android/.gradle/
+android/app/build/
+*.apk
+*.keystore
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+
+# macOS
+macos/Pods/
+
+# Platform generated
+*.pyc
+__pycache__/

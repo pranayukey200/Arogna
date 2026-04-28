@@ -1,0 +1,39 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "arogna",
+          "appId": "1:847187352008:android:fa891909c1fa1a8c7688fd",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "arogna",
+          "configurations": {
+            "android": "1:847187352008:android:fa891909c1fa1a8c7688fd",
+            "ios": "1:847187352008:ios:85e3c63c8cafcde77688fd",
+            "macos": "1:847187352008:ios:85e3c63c8cafcde77688fd",
+            "web": "1:847187352008:web:5738953967df57197688fd",
+            "windows": "1:847187352008:web:8e3e961615093f437688fd"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

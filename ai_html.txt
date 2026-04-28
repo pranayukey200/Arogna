@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arogna - AI Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#adc7ff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#181c20",
+                        "inverse-surface": "#2d3135",
+                        "on-tertiary-fixed": "#141d23",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-low": "#f1f4f9",
+                        "secondary-fixed": "#ffdad9",
+                        "surface": "#f7f9ff",
+                        "on-primary-fixed": "#001a41",
+                        "on-secondary-fixed": "#410008",
+                        "tertiary": "#545d65",
+                        "outline": "#717786",
+                        "primary": "#0059bb",
+                        "surface-container": "#ebeef3",
+                        "secondary-fixed-dim": "#ffb3b2",
+                        "surface-dim": "#d7dadf",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "surface-tint": "#005bc0",
+                        "primary-container": "#0070ea",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fcfcff",
+                        "surface-container-high": "#e5e8ee",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface": "#181c20",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e8",
+                        "on-surface-variant": "#414754",
+                        "inverse-on-surface": "#eef1f6",
+                        "on-secondary-fixed-variant": "#92001f",
+                        "on-primary-container": "#fefcff",
+                        "on-tertiary-fixed-variant": "#3f484f",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e0e3e8",
+                        "outline-variant": "#c1c6d7",
+                        "tertiary-fixed": "#dbe4ed",
+                        "background": "#f7f9ff",
+                        "tertiary-container": "#6d767e",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#bfc8d0",
+                        "secondary-container": "#d93343",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#b6152e",
+                        "on-primary-fixed-variant": "#004493"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["11px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background h-screen flex flex-col overflow-hidden antialiased">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-gray-950 font-sans antialiased text-sm font-medium Inter rounded-none border-b border-gray-100 dark:border-gray-800 shadow-sm flex items-center justify-between px-6 py-4 w-full sticky top-0 z-50">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-outline">person</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400">Arogna</h1>
+</div>
+<button class="hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors active:scale-95 transition-transform duration-150 p-2 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Main Chat Area -->
+<main class="flex-1 relative flex flex-col w-full max-w-3xl mx-auto overflow-hidden">
+<!-- Persistent Call 112 Button -->
+<div class="absolute top-md right-md z-20">
+<button class="bg-secondary text-on-secondary px-md py-sm rounded-lg shadow-[0_8px_30px_rgba(182,21,46,0.25)] flex items-center gap-xs active:scale-95 transition-transform">
+<span class="material-symbols-outlined font-title-lg text-title-lg" style="font-variation-settings: 'FILL' 1;">call</span>
+<span class="font-label-lg text-label-lg uppercase tracking-wider">Call 112</span>
+</button>
+</div>
+<!-- Chat History Scrollable Area -->
+<div class="flex-1 overflow-y-auto px-md pt-xl pb-[120px] flex flex-col gap-lg">
+<!-- Context Date -->
+<div class="flex justify-center">
+<span class="bg-surface-container-low text-on-surface-variant px-sm py-xs rounded-full font-label-md text-label-md uppercase tracking-wider">Today, 14:32</span>
+</div>
+<!-- AI Message -->
+<div class="flex items-end gap-sm max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[18px]">smart_toy</span>
+</div>
+<div class="bg-surface-variant text-on-surface-variant px-md py-sm rounded-2xl rounded-bl-none shadow-sm">
+<p class="font-body-md text-body-md">Arogna Assistant activated. I am here to help coordinate your emergency response. Please describe the situation or state your location.</p>
+</div>
+</div>
+<!-- User Message (Crimson Red per instructions) -->
+<div class="flex items-end gap-sm max-w-[85%] self-end flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+<span class="material-symbols-outlined text-outline text-[18px]">person</span>
+</div>
+<div class="bg-secondary text-on-secondary px-md py-sm rounded-2xl rounded-br-none shadow-sm">
+<p class="font-body-md text-body-md">There has been a multi-vehicle collision on Interstate 95 Northbound near Exit 42. We need immediate medical assistance.</p>
+</div>
+</div>
+<!-- AI Message - Processing -->
+<div class="flex items-end gap-sm max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[18px]">smart_toy</span>
+</div>
+<div class="bg-surface-variant text-on-surface-variant px-md py-sm rounded-2xl rounded-bl-none shadow-sm flex flex-col gap-sm">
+<div class="flex items-center gap-xs text-primary">
+<span class="material-symbols-outlined animate-spin text-[16px]">sync</span>
+<span class="font-label-md text-label-md">Analyzing Incident...</span>
+</div>
+<p class="font-body-md text-body-md">Location confirmed: I-95 North, Exit 42. Alerting nearest highway patrol and EMS units. To expedite triage, can you estimate the number of injured individuals?</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex items-end gap-sm max-w-[85%] self-end flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+<span class="material-symbols-outlined text-outline text-[18px]">person</span>
+</div>
+<div class="bg-secondary text-on-secondary px-md py-sm rounded-2xl rounded-br-none shadow-sm">
+<p class="font-body-md text-body-md">At least three people appear severely injured. One vehicle is smoking.</p>
+</div>
+</div>
+<!-- AI Message - Action Taken -->
+<div class="flex items-end gap-sm max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[18px]">smart_toy</span>
+</div>
+<div class="bg-surface-variant text-on-surface-variant px-md py-sm rounded-2xl rounded-bl-none shadow-sm border border-error-container">
+<div class="flex items-center gap-xs mb-xs text-error">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-label-lg text-label-lg">CRITICAL ESCALATION</span>
+</div>
+<p class="font-body-md text-body-md mb-sm">Fire department and heavy rescue teams have been added to the dispatch. ETA is currently 6 minutes.</p>
+<div class="bg-surface rounded-lg p-sm flex items-start gap-sm">
+<span class="material-symbols-outlined text-tertiary">info</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Please remain at a safe distance from the smoking vehicle. Do not move injured persons unless there is an immediate threat of fire.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat Input Area -->
+<div class="absolute bottom-[80px] left-0 w-full px-md pb-sm bg-gradient-to-t from-background via-background to-transparent pt-lg z-10">
+<div class="max-w-3xl mx-auto flex items-end gap-sm bg-surface-container-lowest rounded-2xl p-xs shadow-[0_-4px_20px_rgba(0,0,0,0.05)] border border-surface-container-highest">
+<button class="p-sm text-outline hover:text-primary transition-colors flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<div class="flex-1 relative">
+<textarea class="w-full bg-transparent border-none focus:ring-0 resize-none font-body-md text-body-md text-on-surface placeholder:text-outline-variant py-sm max-h-[120px]" placeholder="Type your message or use voice..." rows="1"></textarea>
+</div>
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 active:scale-95 transition-transform shadow-sm mb-[2px] mr-[2px]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md text-[10px] font-semibold tracking-normal Inter fixed bottom-0 w-full rounded-t-2xl border-t border-gray-100 dark:border-gray-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-3 pb-8 md:hidden">
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">map</span>
+<span>Map</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">campaign</span>
+<span>Report</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">group</span>
+<span>Feed</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Rewards</span>
+</button>
+<!-- Active Tab: AI Bot -->
+<button class="flex flex-col items-center justify-center gap-1 text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-xl px-2 py-1 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span>AI Bot</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arogna - Emergency Map Interface</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#adc7ff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#181c20",
+                        "inverse-surface": "#2d3135",
+                        "on-tertiary-fixed": "#141d23",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-low": "#f1f4f9",
+                        "secondary-fixed": "#ffdad9",
+                        "surface": "#f7f9ff",
+                        "on-primary-fixed": "#001a41",
+                        "on-secondary-fixed": "#410008",
+                        "tertiary": "#545d65",
+                        "outline": "#717786",
+                        "primary": "#0059bb",
+                        "surface-container": "#ebeef3",
+                        "secondary-fixed-dim": "#ffb3b2",
+                        "surface-dim": "#d7dadf",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "surface-tint": "#005bc0",
+                        "primary-container": "#0070ea",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fcfcff",
+                        "surface-container-high": "#e5e8ee",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface": "#181c20",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e8",
+                        "on-surface-variant": "#414754",
+                        "inverse-on-surface": "#eef1f6",
+                        "on-secondary-fixed-variant": "#92001f",
+                        "on-primary-container": "#fefcff",
+                        "on-tertiary-fixed-variant": "#3f484f",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e0e3e8",
+                        "outline-variant": "#c1c6d7",
+                        "tertiary-fixed": "#dbe4ed",
+                        "background": "#f7f9ff",
+                        "tertiary-container": "#6d767e",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#bfc8d0",
+                        "secondary-container": "#d93343",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#b6152e",
+                        "on-primary-fixed-variant": "#004493"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["11px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface h-screen w-full overflow-hidden flex flex-col relative text-on-surface">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between px-6 py-4 w-full sticky top-0 z-50 bg-white dark:bg-gray-950 font-sans antialiased text-sm font-medium Inter border-b border-gray-100 dark:border-gray-800 shadow-sm active:scale-95 transition-transform duration-150">
+<!-- Leading: Avatar -->
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center overflow-hidden" data-alt="Close up portrait of a professional female paramedic in uniform">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+</div>
+<!-- Headline -->
+<h1 class="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400">Arogna</h1>
+<!-- Trailing: Icon -->
+<button class="text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors p-2 rounded-full flex items-center justify-center relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full border-2 border-white"></span>
+</button>
+</header>
+<!-- Main Map Canvas Area -->
+<main class="flex-1 w-full relative bg-surface-container-low" data-location="Google Maps placeholder - Urban City Grid">
+<!-- Decorative Grid Lines (Simulating Map Streets) -->
+<svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path class="text-outline-variant" d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+<!-- Major Arterials -->
+<path class="text-surface-dim opacity-50" d="M 0,150 Q 200,200 400,100 T 800,250" fill="none" stroke="currentColor" stroke-width="6"></path>
+<path class="text-surface-dim opacity-50" d="M 250,0 Q 300,300 150,800" fill="none" stroke="currentColor" stroke-width="8"></path>
+</svg>
+<!-- Medical Blue Route Line -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-10" xmlns="http://www.w3.org/2000/svg">
+<path class="drop-shadow-md" d="M 120,200 Q 250,180 320,350 T 200,600" fill="none" stroke="#0059bb" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></path>
+<path d="M 120,200 Q 250,180 320,350 T 200,600" fill="none" stroke="#adc7ff" stroke-dasharray="8 8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<!-- Map Markers Container -->
+<div class="absolute inset-0 z-20 pointer-events-none">
+<!-- Hospital Marker (Start of Route) -->
+<div class="absolute top-[180px] left-[100px] flex flex-col items-center pointer-events-auto">
+<div class="bg-primary text-on-primary p-2 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.15)] flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
+</div>
+<div class="w-1 h-3 bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary shadow-sm border border-white"></div>
+<span class="mt-1 font-label-lg text-label-lg text-primary bg-white/90 px-2 py-0.5 rounded backdrop-blur-sm shadow-sm">Mercy Gen</span>
+</div>
+<!-- Ambulance Marker (On Route) -->
+<div class="absolute top-[340px] left-[300px] flex flex-col items-center pointer-events-auto">
+<div class="bg-error text-on-error p-2 rounded-full shadow-[0_4px_20px_rgba(186,26,26,0.3)] flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">ambulance</span>
+</div>
+<span class="mt-1 font-label-md text-label-md text-on-surface-variant bg-white/90 px-2 py-0.5 rounded-full backdrop-blur-sm shadow-sm border border-surface-variant">Unit 42</span>
+</div>
+<!-- Pulsing SOS Marker (Destination) -->
+<div class="absolute top-[580px] left-[180px] flex flex-col items-center pointer-events-auto">
+<!-- Simulated Pulse Rings -->
+<div class="absolute inset-0 flex items-center justify-center -z-10">
+<div class="w-16 h-16 rounded-full bg-error opacity-20"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center -z-10">
+<div class="w-12 h-12 rounded-full bg-error opacity-40"></div>
+</div>
+<div class="bg-error text-on-error p-2 rounded-full shadow-lg flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</div>
+<div class="w-1 h-3 bg-error"></div>
+<div class="w-2 h-2 rounded-full bg-error shadow-sm border border-white"></div>
+<span class="mt-1 font-label-lg text-label-lg text-error bg-white/95 px-2 py-0.5 rounded shadow-sm border border-error-container">Critical Incident</span>
+</div>
+</div>
+</main>
+<!-- Massive Pulsing Floating SOS Button -->
+<div class="fixed bottom-[110px] left-1/2 -translate-x-1/2 z-[60] flex items-center justify-center pointer-events-none">
+<!-- Outer Simulated Pulse -->
+<div class="absolute w-28 h-28 rounded-full bg-secondary opacity-10"></div>
+<!-- Inner Simulated Pulse -->
+<div class="absolute w-24 h-24 rounded-full bg-secondary opacity-25"></div>
+<!-- Outline Ring -->
+<div class="absolute w-[84px] h-[84px] rounded-full border-2 border-secondary/50"></div>
+<!-- Interactive Button -->
+<button class="relative w-20 h-20 rounded-full bg-secondary text-on-secondary shadow-[0_8px_30px_rgba(182,21,46,0.5)] flex items-center justify-center pointer-events-auto hover:bg-[#92001f] transition-colors border-4 border-white dark:border-gray-900 active:scale-95">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">sos</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-3 pb-8 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md text-[10px] font-semibold tracking-normal Inter rounded-t-2xl border-t border-gray-100 dark:border-gray-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<!-- Active Nav Item: Map -->
+<div class="flex flex-col items-center justify-center gap-1 text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-xl px-2 py-1 active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
+<span>Map</span>
+</div>
+<!-- Inactive Nav Item: Report -->
+<div class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined">campaign</span>
+<span>Report</span>
+</div>
+<!-- Inactive Nav Item: Feed -->
+<div class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined">group</span>
+<span>Feed</span>
+</div>
+<!-- Inactive Nav Item: Rewards -->
+<div class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Rewards</span>
+</div>
+<!-- Inactive Nav Item: AI Bot -->
+<div class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200 cursor-pointer">
+<span class="material-symbols-outlined">smart_toy</span>
+<span>AI Bot</span>
+</div>
+</nav>
+</body></html>

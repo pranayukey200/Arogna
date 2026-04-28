@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arogna Community Screen</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#adc7ff",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#181c20",
+                        "inverse-surface": "#2d3135",
+                        "on-tertiary-fixed": "#141d23",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-low": "#f1f4f9",
+                        "secondary-fixed": "#ffdad9",
+                        "surface": "#f7f9ff",
+                        "on-primary-fixed": "#001a41",
+                        "on-secondary-fixed": "#410008",
+                        "tertiary": "#545d65",
+                        "outline": "#717786",
+                        "primary": "#0059bb",
+                        "surface-container": "#ebeef3",
+                        "secondary-fixed-dim": "#ffb3b2",
+                        "surface-dim": "#d7dadf",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "surface-tint": "#005bc0",
+                        "primary-container": "#0070ea",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fcfcff",
+                        "surface-container-high": "#e5e8ee",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface": "#181c20",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e8",
+                        "on-surface-variant": "#414754",
+                        "inverse-on-surface": "#eef1f6",
+                        "on-secondary-fixed-variant": "#92001f",
+                        "on-primary-container": "#fefcff",
+                        "on-tertiary-fixed-variant": "#3f484f",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e0e3e8",
+                        "outline-variant": "#c1c6d7",
+                        "tertiary-fixed": "#dbe4ed",
+                        "background": "#f7f9ff",
+                        "tertiary-container": "#6d767e",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#bfc8d0",
+                        "secondary-container": "#d93343",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#b6152e",
+                        "on-primary-fixed-variant": "#004493"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "margin": "24px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["11px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f4f9; /* surface-container-low */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Custom Scrollbar for hidden horizontal scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-low text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-gray-950 rounded-none border-b border-gray-100 dark:border-gray-800 shadow-sm flex items-center justify-between px-6 py-4 w-full sticky top-0 z-50">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed overflow-hidden flex-shrink-0">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional headshot of a female healthcare worker smiling softly against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp18iVV_HdiRUQ4caiwoyrS9gzCEqn5sd5Gb1u6YkutBPIv1I78XWe25Izt8rxEpKpnb01I5YUS5LEADrI1gaMx9H1dPfzjczF6JlFdeBJn99CNvZurJiEncLqRzjJsfZhUrx9GLLg2Qu5TlGEfxJn93JkFbNecgifzvWpYhdFdH-CQnXG_7YHRHYQ4DanbbS6rBYfw4lS7HAWUZFgXVLzrM44dmOq9H9IxmeErHSLZANcyhcwz8-dpXLPNh76kH957z9g0dvuyaU"/>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400 font-sans antialiased text-sm font-medium Inter">
+                Arogna
+            </h1>
+</div>
+<button class="text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors active:scale-95 transition-transform duration-150 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pb-32 pt-md px-4 sm:px-gutter max-w-3xl w-full mx-auto flex flex-col gap-md">
+<!-- Filter/Sorting Tabs (Reddit Style) -->
+<div class="flex gap-xs overflow-x-auto hide-scrollbar py-2">
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                Hot
+            </button>
+<button class="bg-surface-container-highest text-on-surface-variant hover:bg-surface-dim transition-colors px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">new_releases</span>
+                New
+            </button>
+<button class="bg-surface-container-highest text-on-surface-variant hover:bg-surface-dim transition-colors px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                Local Updates
+            </button>
+<button class="bg-surface-container-highest text-on-surface-variant hover:bg-surface-dim transition-colors px-4 py-2 rounded-full font-label-lg text-label-lg whitespace-nowrap flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                Official Alerts
+            </button>
+</div>
+<!-- Feed List -->
+<div class="flex flex-col gap-md">
+<!-- Card 1: Critical Health Alert -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col cursor-pointer hover:border-outline transition-colors">
+<!-- Card Header -->
+<div class="p-md pb-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-error-container text-[14px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center gap-1">
+                                r/PublicHealthDept 
+                                <span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;" title="Verified Official">check_circle</span>
+</span>
+<span class="text-[11px] text-outline">Posted by u/CityGov_Official • 2h ago</span>
+</div>
+</div>
+<!-- Status Chip -->
+<span class="bg-error-container text-on-error-container px-2 py-1 rounded-md font-label-md text-label-md uppercase tracking-wider">
+                        Health Alert
+                    </span>
+</div>
+<!-- Card Content -->
+<div class="px-md py-sm flex flex-col gap-sm">
+<h2 class="font-title-lg text-title-lg text-on-surface">Boil Water Advisory Issued for Downtown Sector</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Due to an unexpected main break on 4th Avenue, all residents and businesses in the designated downtown zone must boil tap water for a rolling 3 minutes before consumption or use in food preparation. This advisory remains in effect until further notice.
+                    </p>
+<!-- Attached Map/Image -->
+<div class="w-full h-48 bg-surface-container rounded-lg overflow-hidden border border-outline-variant mt-2 relative">
+<img class="w-full h-full object-cover opacity-90 mix-blend-multiply" data-alt="simplified map overlay showing a highlighted red zone over city streets indicating an alert area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Hl9eRoqdM4NEx1fPw6FHQdMZ2p021Me1RWStnnZg1SwAyFDOqRA0dbPVsQMtMCTK2JsUpP0rQyT2SJfS7y_5jzoMRcbCYk6fdCKuDXuhqn6v1qaHKHWP0j7aEwXGV4TueAj32sTWEk9-vUIYwMpjzWathyAEhk5Iy26uOjd8M870kmepAA6QkzFGM8eujmvJv6DZiB6t_BI9kTpwwsxGpJ8w0u5FKYPssEsEJz1EUHJOw095S7jydshiqpeh0E-tvoZA73rXfr8"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-surface-container-lowest/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm flex items-center gap-2 border border-outline-variant">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-lg text-label-lg text-on-surface">View Affected Zone</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Footer (Reddit Actions) -->
+<div class="px-md py-3 bg-surface border-t border-surface-variant flex items-center gap-4">
+<div class="flex items-center bg-surface-container-highest rounded-full">
+<button class="p-2 text-outline hover:text-secondary hover:bg-secondary-container/20 rounded-l-full transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'wght' 600;">arrow_upward</span>
+</button>
+<span class="font-label-lg text-label-lg text-on-surface px-2">4.2k</span>
+<button class="p-2 text-outline hover:text-primary hover:bg-primary-container/20 rounded-r-full transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'wght' 600;">arrow_downward</span>
+</button>
+</div>
+<button class="flex items-center gap-2 text-outline hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="font-label-lg text-label-lg">312</span>
+</button>
+<button class="flex items-center gap-2 text-outline hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-full transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="font-label-lg text-label-lg hidden sm:inline">Share</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Local Update -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col cursor-pointer hover:border-outline transition-colors">
+<!-- Card Header -->
+<div class="p-md pb-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed text-[14px]">local_hospital</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">r/CommunityHealth</span>
+<span class="text-[11px] text-outline">Posted by u/ClinicWest • 5h ago</span>
+</div>
+</div>
+<!-- Status Chip -->
+<span class="bg-primary-container text-on-primary-container px-2 py-1 rounded-md font-label-md text-label-md uppercase tracking-wider">
+                        Local Update
+                    </span>
+</div>
+<!-- Card Content -->
+<div class="px-md py-sm flex flex-col gap-sm">
+<h2 class="font-title-lg text-title-lg text-on-surface">Free Flu Vaccine Drive This Weekend</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Preparing for the season! Community Clinic West is hosting a free walk-in flu vaccination drive this Saturday from 9 AM to 4 PM. No appointment necessary. Open to all residents over 6 months of age.
+                    </p>
+</div>
+<!-- Card Footer (Reddit Actions) -->
+<div class="px-md py-3 bg-surface border-t border-surface-variant flex items-center gap-4">
+<div class="flex items-center bg-surface-container-highest rounded-full">
+<button class="p-2 text-primary bg-primary-container/20 hover:bg-primary-container/40 rounded-l-full transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'wght' 600;">arrow_upward</span>
+</button>
+<span class="font-label-lg text-label-lg text-primary px-2">892</span>
+<button class="p-2 text-outline hover:text-primary hover:bg-primary-container/20 rounded-r-full transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'wght' 600;">arrow_downward</span>
+</button>
+</div>
+<button class="flex items-center gap-2 text-outline hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="font-label-lg text-label-lg">45</span>
+</button>
+<button class="flex items-center gap-2 text-outline hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-full transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="font-label-lg text-label-lg hidden sm:inline">Share</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Discussion -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col cursor-pointer hover:border-outline transition-colors">
+<!-- Card Header -->
+<div class="p-md pb-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[14px]">person</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">r/GeneralDiscussion</span>
+<span class="text-[11px] text-outline">Posted by u/HealthyHabits99 • 8h ago</span>
+</div>
+</div>
+<!-- Status Chip -->
+<span class="bg-surface-variant text-on-surface-variant px-2 py-1 rounded-md font-label-md text-label-md uppercase tracking-wider">
+                        Discussion
+                    </span>
+</div>
+<!-- Card Content -->
+<div class="px-md py-sm flex flex-col gap-sm">
+<h2 class="font-title-lg text-title-lg text-on-surface">Anyone else experiencing severe pollen allergies today?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        The air quality index looked fine this morning, but I've been sneezing non-stop since I stepped outside in the North district. Wondering if there's a specific localized bloom happening or if I just need to up my medication.
+                    </p>
+</div>
+<!-- Card Footer (Reddit Actions) -->
+<div class="px-md py-3 bg-surface border-t border-surface-variant flex items-center gap-4">
+<div class="flex items-center bg-surface-container-highest rounded-full">
+<button class="p-2 text-outline hover:text-secondary hover:bg-secondary-container/20 rounded-l-full transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'wght' 600;">arrow_upward</span>
+</button>
+<span class="font-label-lg text-label-lg text-on-surface px-2">124</span>
+<button class="p-2 text-outline hover:text-primary hover:bg-primary-container/20 rounded-r-full transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'wght' 600;">arrow_downward</span>
+</button>
+</div>
+<button class="flex items-center gap-2 text-outline hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="font-label-lg text-label-lg">89</span>
+</button>
+<button class="flex items-center gap-2 text-outline hover:text-on-surface hover:bg-surface-container-highest px-3 py-2 rounded-full transition-colors ml-auto">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="font-label-lg text-label-lg hidden sm:inline">Share</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md fixed bottom-0 w-full rounded-t-2xl border-t border-gray-100 dark:border-gray-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-3 pb-8">
+<!-- Map (Inactive) -->
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="text-[10px] font-semibold tracking-normal Inter text-center">Map</span>
+</a>
+<!-- Report (Inactive) -->
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+<span class="text-[10px] font-semibold tracking-normal Inter text-center">Report</span>
+</a>
+<!-- Feed (Active) -->
+<a class="flex flex-col items-center justify-center gap-1 text-blue-600 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-xl px-2 py-1 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="text-[10px] font-semibold tracking-normal Inter text-center">Feed</span>
+</a>
+<!-- Rewards (Inactive) -->
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span class="text-[10px] font-semibold tracking-normal Inter text-center">Rewards</span>
+</a>
+<!-- AI Bot (Inactive) -->
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400 dark:text-gray-500 hover:text-blue-500 transition-all active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="text-[10px] font-semibold tracking-normal Inter text-center">AI Bot</span>
+</a>
+</nav>
+</body></html>

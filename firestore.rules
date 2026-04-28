@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Users collection:
+    // Any authenticated user can read their own user document to get their role.
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // SOS Events collection:
+    // Any authenticated user can read SOS events.
+    // Only admins or responders can update SOS events.
+    // Anyone can create an SOS event (even unauthenticated users, for emergency purposes).
+    match /sos_events/{eventId} {
+      allow read: if request.auth != null;
+      allow create: if true;
+      allow update, delete: if request.auth != null && (
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' ||
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'responder' ||
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'hospital'
+      );
+    }
+  }
+}

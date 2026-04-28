@@ -1,0 +1,120 @@
+﻿Resolving dependencies...
+Downloading packages...
+  meta 1.17.0 (1.18.2 available)
+  test_api 0.7.10 (0.7.11 available)
+  vector_math 2.2.0 (2.3.0 available)
+Got dependencies!
+3 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing arogna...                                             
+
+   info - Parameter 'key' could be a super parameter - lib\admin_hospital_status.dart:4:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_hospital_status.dart:237:41 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\admin_live_map.dart:5:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:42:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:84:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:85:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:93:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:104:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:125:57 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:153:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:157:57 - deprecated_member_use
+  error - The getter 'emergency_home' isn't defined for the type 'Icons' - lib\admin_live_map.dart:196:39 - undefined_getter
+  error - The getter 'emergency_home' isn't defined for the type 'Icons' - lib\admin_live_map.dart:236:37 - undefined_getter
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:281:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_live_map.dart:315:41 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\admin_reports.dart:4:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_reports.dart:202:33 - deprecated_member_use
+   info - Unnecessary use of multiple underscores - lib\admin_reports.dart:362:45 - unnecessary_underscores
+   info - Unnecessary use of multiple underscores - lib\admin_reports.dart:362:49 - unnecessary_underscores
+   info - Parameter 'key' could be a super parameter - lib\admin_sos_alerts.dart:8:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\admin_user_directory.dart:4:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_user_directory.dart:76:49 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\admin_user_directory.dart:151:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_user_directory.dart:353:62 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\admin_user_directory.dart:379:14 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_user_directory.dart:380:47 - deprecated_member_use
+   info - 'MaterialState' is deprecated and shouldn't be used. Use WidgetState instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\admin_user_directory.dart:381:29 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_user_directory.dart:458:86 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_user_directory.dart:461:77 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\admin_user_directory.dart:484:70 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\citizen_arogna_ai_assistant.dart:7:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\citizen_community_feed.dart:4:9 - use_super_parameters
+   info - Unnecessary use of multiple underscores - lib\citizen_community_feed.dart:50:35 - unnecessary_underscores
+   info - Unnecessary use of multiple underscores - lib\citizen_community_feed.dart:50:39 - unnecessary_underscores
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_community_feed.dart:228:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_community_feed.dart:358:43 - deprecated_member_use
+   info - Unnecessary use of multiple underscores - lib\citizen_community_feed.dart:360:41 - unnecessary_underscores
+   info - Unnecessary use of multiple underscores - lib\citizen_community_feed.dart:360:45 - unnecessary_underscores
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_community_feed.dart:367:59 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_community_feed.dart:371:61 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\citizen_main_emergency_map.dart:11:9 - use_super_parameters
+   info - Don't use 'BuildContext's across async gaps - lib\citizen_main_emergency_map.dart:56:7 - use_build_context_synchronously
+warning - The declaration '_buildPlaceholder' isn't referenced - lib\citizen_main_emergency_map.dart:92:10 - unused_element
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_main_emergency_map.dart:144:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_main_emergency_map.dart:153:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_main_emergency_map.dart:163:54 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\citizen_onboarding_permissions.dart:4:9 - use_super_parameters
+warning - The value of the field 'primaryContainer' isn't used - lib\citizen_onboarding_permissions.dart:17:22 - unused_field
+warning - The value of the field 'onPrimaryContainer' isn't used - lib\citizen_onboarding_permissions.dart:19:22 - unused_field
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_onboarding_permissions.dart:111:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_onboarding_permissions.dart:248:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_onboarding_permissions.dart:251:33 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\citizen_onboarding_permissions.dart:297:13 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\citizen_profile.dart:4:9 - use_super_parameters
+warning - The value of the field 'errorColor' isn't used - lib\citizen_profile.dart:23:22 - unused_field
+warning - The value of the field 'surfaceTint' isn't used - lib\citizen_profile.dart:25:22 - unused_field
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_profile.dart:69:39 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\citizen_report_incident.dart:4:9 - use_super_parameters
+warning - The value of the field 'onBackground' isn't used - lib\citizen_report_incident.dart:13:22 - unused_field
+warning - The value of the field 'surfaceContainer' isn't used - lib\citizen_report_incident.dart:17:22 - unused_field
+warning - The value of the field 'primaryContainer' isn't used - lib\citizen_report_incident.dart:24:22 - unused_field
+warning - The value of the field 'onPrimaryContainer' isn't used - lib\citizen_report_incident.dart:25:22 - unused_field
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_report_incident.dart:116:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_report_incident.dart:246:60 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_report_incident.dart:320:62 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\citizen_rewards_profile.dart:4:9 - use_super_parameters
+   info - Unnecessary use of multiple underscores - lib\citizen_rewards_profile.dart:49:35 - unnecessary_underscores
+   info - Unnecessary use of multiple underscores - lib\citizen_rewards_profile.dart:49:39 - unnecessary_underscores
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_rewards_profile.dart:111:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_rewards_profile.dart:128:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_rewards_profile.dart:148:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_rewards_profile.dart:178:51 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_rewards_profile.dart:180:70 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_rewards_profile.dart:226:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_rewards_profile.dart:244:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\citizen_rewards_profile.dart:293:49 - deprecated_member_use
+   info - Unnecessary use of multiple underscores - lib\citizen_rewards_profile.dart:361:33 - unnecessary_underscores
+   info - Unnecessary use of multiple underscores - lib\citizen_rewards_profile.dart:361:37 - unnecessary_underscores
+   info - Parameter 'key' could be a super parameter - lib\hospital_incoming_patients.dart:4:9 - use_super_parameters
+  error - A value of type 'int' can't be assigned to a parameter of type 'FontWeight?' in a const constructor - lib\hospital_incoming_patients.dart:49:27 - const_constructor_param_type_mismatch
+  error - The argument type 'int' can't be assigned to the parameter type 'FontWeight?'.  - lib\hospital_incoming_patients.dart:49:39 - argument_type_not_assignable
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\hospital_incoming_patients.dart:198:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\hospital_incoming_patients.dart:330:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\hospital_incoming_patients.dart:331:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\hospital_incoming_patients.dart:345:44 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\hospital_resource_status.dart:4:9 - use_super_parameters
+warning - The value of the field 'onPrimaryContainer' isn't used - lib\hospital_resource_status.dart:24:22 - unused_field
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\hospital_resource_status.dart:289:61 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\hospital_resource_status.dart:389:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\hospital_resource_status.dart:475:50 - deprecated_member_use
+   info - 'activeColor' is deprecated and shouldn't be used. Use activeThumbColor instead. This feature was deprecated after v3.31.0-2.0.pre - lib\hospital_resource_status.dart:499:13 - deprecated_member_use
+  error - Undefined name 'primaryFixed' - lib\hospital_resource_status.dart:500:31 - undefined_identifier
+   info - Parameter 'key' could be a super parameter - lib\login_premium_3d_experience.dart:11:9 - use_super_parameters
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\login_premium_3d_experience.dart:223:59 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\login_premium_3d_experience.dart:225:59 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\login_premium_3d_experience.dart:227:59 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\login_premium_3d_experience.dart:229:59 - use_build_context_synchronously
+   info - Parameter 'key' could be a super parameter - lib\responder_active_dispatch.dart:8:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\responder_dispatch_history.dart:56:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\responder_dispatch_history.dart:64:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\responder_nearby_hospitals.dart:77:36 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\seed_auth.dart:49:24 - use_build_context_synchronously
+
+flutter : 102 issues found. (ran in 4.6s)
+At line:1 char:1
++ flutter analyze 2>&1 | Out-File -Encoding utf8 analyze_output.txt
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (102 issues found. (ran in 4.6s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
