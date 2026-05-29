@@ -12,8 +12,12 @@
 ```
 
 ### **Rapid Crisis Response Platform**
- Open Innovation Track*
-
+<p align="center">
+  <a href="http://arognareadmepage.vercel.app/">
+    <img src="https://img.shields.io/badge/Arogna_Readme_Page-Click_Here_To_View-B71C1C?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Arogna Readme Page" />
+  </a>
+ 
+</p>
 <br/>
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
