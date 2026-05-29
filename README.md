@@ -12,7 +12,7 @@
 ```
 
 ### **Rapid Crisis Response Platform**
-*Google Solution Challenge 2026 — Open Innovation Track*
+ Open Innovation Track*
 
 <br/>
 
